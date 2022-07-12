@@ -94,10 +94,7 @@ def enter_move(board):
     else:
         board[users_row][users_column] = "O"
     return board
-    # users_move = (input("Enter your move here: ")).upper()
-    # while users_move != "O":
-        # print("Wrong value entered. Accepted values are o and O. please try again.")
-        # users_move = (input("Enter your move here: ")).upper()
+  
 
 
 def make_list_of_free_fields(board):
@@ -163,16 +160,6 @@ def victory_for(board, sign):
 
 
 
-        # for col in row:
-        #    print(col, "  <-------- col")
-        #   if sign == col:
-        #        count2 = count2 + 1
-        #        print(count2, " <---- column count")
-        # if count2 == 3:
-        #    print("Player with ", sign, " has won!")
-        #    break
-
-
 def draw_move(board):
     stop = False
     if board[1][1] == 5:
@@ -195,9 +182,7 @@ def draw_move(board):
             if stop == True:
                 break
     return board
-# from random import randrange
-# for i in range(4):
-    # print(randrange(4))
+
 
 board = [[1,2,3],[4,5,6],[7,8,9]]
 
@@ -214,55 +199,6 @@ time.sleep(5)
 print("Let's play! \n")
 
 
-# Computer makes a move
-#board = draw_move(board)
-#display_board(board)
-#time.sleep(5)
-
-
-#print("\n")
-#print("It's your turn.")
-#print("These are all of the free spaces you can use.")
-# shows all free spaces
-#make_list_of_free_fields(board)
-
-# Player makes a move
-#print("What's your move?")
-#board = enter_move(board)
-#print("\n Alright nice move!")
-#display_board(board)
-#time.sleep(1)
-
-#print("It's the computers turn.")
-#print("Computer come on down!")
-#time.sleep(2)
-# Computer makes a move
-#board = draw_move(board)
-#display_board(board)
-
-#print("Hmmmm... Doesn't look good. Can you stop him? \n")
-
-# Player makes a move
-#print("What will it be. It's your turn.")
-#board = enter_move(board)
-#display_board(board)
-#time.sleep(1)
-
-#print("Computers turn.")
-#time.sleep(2)
-#board = draw_move(board)
-#display_board(board)
-
-#print("Your turn.")
-#board = enter_move(board)
-#display_board(board)
-#time.sleep(1)
-
-# Checking if anyone won
-#game_ending = victory_for(board, 'O')
-#if not game_ending:
-#    game_ending = victory_for(board, 'X')
-#time.sleep(1)
 game_ending = False
 while game_ending is not True:
     if not game_ending:
@@ -288,13 +224,3 @@ while game_ending is not True:
     if not game_ending:
         game_ending = victory_for(board, 'X')
 
-# if game_ending:
- #   print("Game is over.")
-#else:
-#    print("Computers turn.")
- #   time.sleep(2)
- #   board = draw_move(board)
-#    display_board(board)
-#    game_ending = victory_for(board, 'X')
- #   if game_ending:
- #       print()
